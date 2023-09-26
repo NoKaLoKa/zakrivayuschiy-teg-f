@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -15,6 +14,153 @@
 */
 
 .page {
+  color: var(--themes-main-color);
+  font-family: var(--main-font__family), sans-serif;
+  background-image: var(--themes-background__gradient);
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+}
+
+.header {
+  display: grid;
+  justify-content: center;
+  width: 100vw;
+  margin: 100px 0;
+  border: 2px solid var(--themes-main-color);
+  font-family: var(--accent-font__family), sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: var(--themes-background);
+}
+
+.header-title {
+  padding-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header-subtitle {
+  justify-self: center;
+  padding: 20px 0 25px 0;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.theme-menu {
+  justify-self: center;
+  padding-left: 20px;
+}
+
+.theme-menu__list {
+  padding-bottom: 25px;
+}
+
+.theme-menu__item:not(:last-of-type){
+  padding-bottom: 11px;
+}
+
+.theme-menu__button {
+  border: none;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
+.theme-menu__item .theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  margin-left: -19px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  border: 2px solid var(--themes-main-color);
+  font-family: var(--main-font__family), sans-serif;
+  background-color: var(--themes-background);
+}
+
+.card-title {
+  padding: 5px 10px;
+  font-weight: var(--main-title__weight);
+  font-size: 18px;
+}
+
+.card-picture {
+  width: 100vw;
+  height: 100vw;
+  border: 2px solid var(--themes-main-color);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.card-text {
+  padding: 25px 25px 0;
+  font-weight: var(--main-text__weight);
+  font-size: 18px;
+}
+
+.button-list{
+  display: flex;
+  justify-content: end;
+  padding: 25px;
+}
+
+.card-button {
+  border: none;
+  background-color: transparent;
+}
+
+.card__like-button {
+  border: 2px solid var(--themes-main-color);
+  padding: 10px 36px;
+  line-height: 90%;
+}
+
+.button-list__item {
+  font-family: var(--accent-font__family), sans-serif;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 54px 0 102px 0;
+  font-family: var(--accent-font__family), sans-serif;
+  font-size: 14px;
+  line-height: 90%;
+  background-color: var(--themes-background);
+}
+
+.footer-button {
+  display: flex;
+  padding: 15px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 2px solid var(--themes-main-color);
+}
+
+.footer-button__floppy {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+svg g {
+  fill: var(--themes-main-color);
 }
