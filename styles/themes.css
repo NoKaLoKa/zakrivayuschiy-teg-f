@@ -17,8 +17,8 @@
 }
 
 :root.theme-dark {
-  --main-title__weight: 785;
-  --main-text__weight: 465;
+  --main-title__weight: 'wght' 785;
+  --main-text__weight: 'wght' 465;
   --themes-main-color: #00CC14;
   --themes-background: #000;
   --themes-button-color: #00CC14;
@@ -30,8 +30,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-title__weight: 785;
-    --main-text__weight: 465;
+    --main-title__weight: 'wght' 785;
+    --main-text__weight: 'wght' 465;
     --themes-main-color: #00CC14;
     --themes-background: #000;
     --themes-button-color: #00CC14;
